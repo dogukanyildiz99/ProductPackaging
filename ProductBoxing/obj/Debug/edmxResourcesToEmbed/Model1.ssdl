@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProductDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BoxDetail">
+    <Key>
+      <PropertyRef Name="BoxDetailID" />
+    </Key>
+    <Property Name="BoxDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BoxMasterID" Type="int" />
+    <Property Name="LabelNo" Type="nvarchar(max)" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BoxMaster">
+    <Key>
+      <PropertyRef Name="BoxMasterID" />
+    </Key>
+    <Property Name="BoxMasterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="BoxTotal" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="LabelNo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReferenceCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="BoxingNumber" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ProductDBModelStoreContainer">
+    <EntitySet Name="BoxDetail" EntityType="Self.BoxDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BoxMaster" EntityType="Self.BoxMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

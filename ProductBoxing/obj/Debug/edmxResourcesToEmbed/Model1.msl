@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProductDBModelStoreContainer" CdmEntityContainer="ProductDBEntities">
+    <EntitySetMapping Name="BoxDetail">
+      <EntityTypeMapping TypeName="ProductDBModel.BoxDetail">
+        <MappingFragment StoreEntitySet="BoxDetail">
+          <ScalarProperty Name="BoxDetailID" ColumnName="BoxDetailID" />
+          <ScalarProperty Name="BoxMasterID" ColumnName="BoxMasterID" />
+          <ScalarProperty Name="LabelNo" ColumnName="LabelNo" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BoxMaster">
+      <EntityTypeMapping TypeName="ProductDBModel.BoxMaster">
+        <MappingFragment StoreEntitySet="BoxMaster">
+          <ScalarProperty Name="BoxMasterID" ColumnName="BoxMasterID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="BoxTotal" ColumnName="BoxTotal" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="LabelNo" ColumnName="LabelNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="ProductDBModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ReferenceCode" ColumnName="ReferenceCode" />
+          <ScalarProperty Name="BoxingNumber" ColumnName="BoxingNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
