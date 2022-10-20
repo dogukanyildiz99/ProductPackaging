@@ -1,6 +1,5 @@
 # Product Packaging
 
-- A packaging application created with Windows Forms using Entity Framework with C#.
 - You can add, delete and update a product.
 - You can create boxes with desired product.
 - Boxes have a different limit of labels depending on the products.
